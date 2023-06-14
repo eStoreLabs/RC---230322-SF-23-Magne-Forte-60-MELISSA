@@ -17,7 +17,7 @@ Melissa
 
 ### E-RETAILER’S SPECIFICATION (technical guidelines; html, css, graphics, photos, resolution)
 <!-- please enter any additional comments important for the project -->
-max-width: 790px;
+`max-width: 790px;`
 
 Remove JavaScript files. All JavaScript content needs to be coded again using only html and css. Ask PM about it. In general, they do not accept JS, but there were exceptions for some RC.
 
@@ -27,7 +27,7 @@ All images should be in webp. format.
 
 Whole card needs to have less than <500kb.
 
-Do not use <h1> tags.
+Do not use `<h1>` tags.
 
 Do not use external source code: sliders/carousels from slider.js, slick-carousel, owl carousel etc. Needs to be coded without external sources.
   
