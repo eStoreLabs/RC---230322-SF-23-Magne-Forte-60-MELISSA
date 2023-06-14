@@ -1,4 +1,4 @@
-# 230322 SF 23 Magne Forte 100 generyk
+# 230322 SF 23 Magne Forte 100 Melissa
 Forte 60 będzie tak samo
 ## LIVE SITE LINK 
 <!-- please enter link to site preview here -->
