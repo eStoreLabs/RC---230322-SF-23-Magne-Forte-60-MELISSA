@@ -23,7 +23,7 @@ Melissa
 
 ~~Remove all videos. Melissa does not accept any videos in code.~~
 
-All images should be in webp. format.
+~~All images should be in webp. format.~~
 
 Whole card needs to have less than <500kb.
 
