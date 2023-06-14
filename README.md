@@ -31,4 +31,4 @@ Whole card needs to have less than <500kb.
 
 ~~Do not use external source code: sliders/carousels from slider.js, slick-carousel, owl carousel etc. Needs to be coded without external sources.~~
   
-styles have to placed in html file ( not in separete css file).
+~~styles have to placed in html file ( not in separete css file).~~
