@@ -67,19 +67,20 @@
 }
 
 #es-magne-b6.es-magne-b6 .es-kv__background {
-    display: none;
+   /* display: none; */
+   position: absolute;
 }
 
 #es-magne-b6.es-magne-b6 .es-kv__title {
-    margin: 0;
-    padding: 0;
+    margin-left: 5%;
+    padding-top: 5%;
     line-height: 0.8;
     color: inherit;
     font-family: "Bliss";
     font-weight: 600;
     font-size: 48px;
     text-transform: uppercase;
-    text-align: center;
+    /* text-align: center; */
     text-shadow: 0px 0px 5px #7999cf;
     position: relative;
     z-index: 5;
@@ -87,19 +88,20 @@
 }
 
 #es-magne-b6.es-magne-b6 .es-kv__subtitle {
-    margin: 0;
-    padding: 0;
+    margin-left: 5%;
+    padding-left: 0;
     line-height: 1;
     color: inherit;
     font-family: "Bliss";
     font-weight: 600;
     font-size: 20px;
     text-transform: uppercase;
-    text-align: center;
+    /* text-align: center; */
     text-shadow: 0px 0px 5px #7999cf;
     position: relative;
     z-index: 5;
     margin-bottom: 20%;
+    max-width: 243px;
 }
 
 #es-magne-b6.es-magne-b6 .es-kv__packshot {
@@ -734,7 +736,7 @@
     color: #001883;
     font-family: "Gilroy SemiBold";
     font-weight: 600;
-    font-size: 40px;
+    font-size: 32px;
     text-transform: uppercase;
     text-align: center;
     padding-top: 32px;
@@ -1156,12 +1158,13 @@
 }
 
 
-@media screen and (min-width: 375px){
+ @media screen and (min-width: 375px){
     #es-magne-b6.es-magne-b6 .es-kv__img--packshot {
         max-width: 90%;
     }
     #es-magne-b6.es-magne-b6 .es-kv__background {
-        display: block;
+        /* display: block; */
+        position: static;
     }
     #es-magne-b6.es-magne-b6 .es-kv__title {
         text-align: left;
@@ -1171,8 +1174,7 @@
     #es-magne-b6.es-magne-b6 .es-kv__subtitle {
         text-align: left;
         margin-left: 5%;
-        max-width: 300px;
-    }
+            }
     #es-magne-b6.es-magne-b6 .es-kv__packshot {
         padding-bottom: 0;
     }
@@ -1384,8 +1386,13 @@
     #es-magne-b6.es-magne-b6 .es-deal__content {
         align-items: flex-start;
     }
-}
+} 
 
+@media screen and (min-width: 375px) {
+  #es-magne-b6.es-magne-b6 .es-kv__subtitle {
+    max-width: 300px;
+  }
+}
 
 @media screen and (min-width: 777px){
     #es-magne-b6.es-magne-b6 .es-kv__title {
