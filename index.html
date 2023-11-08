@@ -8,19 +8,24 @@
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <style>
       @font-face {
-    font-family: 'Bliss';
+    font-family: "Bliss";
     src: url("./fonts/Bliss2-Bold.woff") format("woff");
     font-display: swap;
   }
+  @font-face {
+    font-family: "Bliss-Heavy";
+    src: url("./fonts/Bliss-Heavy.otf") format("opentype");
+    font-display: swap;
+}
 
   @font-face {
-    font-family: 'Gilroy SemiBold';
+    font-family: "Gilroy SemiBold";
     src: url("./fonts/Gilroy-SemiBold.woff") format("woff");
     font-display: swap;
   }
 
   @font-face {
-    font-family: 'Gilroy';
+    font-family: "Gilroy";
     src: url("./fonts/Gilroy-Regular.woff") format("woff");
     font-display: swap;
   }
@@ -60,12 +65,24 @@
 #es-magne-b6.es-magne-b6 .es-kv__img--packshot {
     max-width: 80%;
 }
+@media (min-width: 375px) {
+  #es-magne-b6.es-magne-b6 .es-kv__img--packshot {
+    max-width: 90%;
+  }
+}
+@media (min-width: 450px) {
+  #es-magne-b6.es-magne-b6 .es-kv__img--packshot {
+    max-width: 77%;
+  }
+}
 
 #es-magne-b6.es-magne-b6 .es-kv {
     background: linear-gradient(90deg, rgba(208,231,255,1) 0%, rgba(255,255,255,1) 50%, rgba(216,232,249,1) 100%);
     margin-bottom: 32px;
 }
-
+#es-magne-b6.es-magne-b6 .es-kv__container {
+  position: relative;
+}
 #es-magne-b6.es-magne-b6 .es-kv__background {
    /* display: none; */
    position: absolute;
@@ -95,7 +112,7 @@
     color: inherit;
     font-family: "Bliss";
     font-weight: 600;
-    font-size: 20px;
+    font-size: 19px;
     text-transform: uppercase;
     /* text-align: center; */
     text-shadow: 0px 0px 5px #7999cf;
@@ -104,7 +121,40 @@
     margin-bottom: 20%;
     max-width: 243px;
 }
+#es-magne-b6.es-magne-b6 .es-kv__label {
+  font-family: "Bliss-Heavy", sans-serif;
+  text-transform: uppercase;
+  font-size: clamp(0.75rem, -0.1011rem + 4.2553vw, 2rem);
+  max-width: 19ch;
+  color:#001883;
+  background-color: #FFF;
+  padding: 0.188rem 1rem;
+  position: absolute;
+  top: 45%;
+  left: 0;
+  z-index: 2;
+  -webkit-box-shadow: 0px 0px 50px 35px rgba(107, 139, 199, 0.3);
+  -moz-box-shadow: 0px 0px 50px 35px rgba(107, 139, 199, 0.3);
+  box-shadow: 0px 0px 50px 35px rgba(107, 139, 199, 0.3);
+}
+@media (min-width: 390px) {
+  #es-magne-b6.es-magne-b6 .es-kv__label {
+    top: 40%;
+  }
+}
 
+@media (min-width: 576px) {
+  #es-magne-b6.es-magne-b6 .es-kv__label {
+    top: 35%;
+  }
+}
+
+@media (min-width: 768px) {
+  #es-magne-b6.es-magne-b6 .es-kv__label {
+    max-width: 17ch;
+    top: 38%;
+  }
+}
 #es-magne-b6.es-magne-b6 .es-kv__packshot {
     position: relative;
     padding-bottom: 24px;
@@ -115,20 +165,19 @@
     padding: 32px 0;
     line-height: inherit;
     color: #962d38;
-    font-family: inherit;
-    font-weight: 600;
-    font-size: 32px;
+    font-family: "Bliss Heavy", sans-serif;
+    font-size: clamp(1.5rem, 0.1383rem + 6.8085vw, 3.5rem);
     text-transform: uppercase;
     text-align: center;
 }
 
-#es-magne-b6.es-magne-b6 .es-kv__badge {
+/* #es-magne-b6.es-magne-b6 .es-kv__badge {
     position: absolute;
     top: -35%;
     left: 5%;
     max-width: 25%;
     animation: es-pulse 4s infinite;
-}
+} */
 
 #es-magne-b6.es-magne-b6 .es-kv__content {
     display: flex;
@@ -211,9 +260,8 @@
     padding: 0;
     line-height: inherit;
     color: inherit;
-    font-family: "Gilroy SemiBold";
-    font-weight: 600;
-    font-size: 28px;
+    font-family: "Bliss Heavy", sans-serif;
+    font-size: clamp(1.5rem, 0.1383rem + 6.8085vw, 3.5rem);
     text-transform: uppercase;
     text-align: center;
     padding-top: 48px;
@@ -238,15 +286,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 12px;
+    gap: 32px;
     background-color: #fff;
     border: 2px solid #001883;
     border-radius: 50px;
     min-width: 230px;
+    
 }
 
+
 #es-magne-b6.es-magne-b6 .es-benefits__circle {
-    margin-top: 12px;
     border: 2px solid #001883;
     border-radius: 222px;
     background-color: #fff;
@@ -255,8 +304,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: -2px;
 }
-
+@media (min-width: 320px) {
+  #es-magne-b6.es-magne-b6 .es-benefits__single {
+    flex-direction: row;
+    border-radius: 222px;
+    width: 275px;
+    justify-content: flex-start;
+  }
+  #es-magne-b6.es-magne-b6 .es-benefits__icon {
+    width: 40px;
+    height: 40px;
+  }
+}
 #es-magne-b6.es-magne-b6 .es-benefits__icon {
     animation: es-pulse 2s infinite;
 }
@@ -397,9 +458,8 @@
     padding: 0;
     line-height: inherit;
     color: #001883;
-    font-family: "Gilroy SemiBold";
-    font-weight: 600;
-    font-size: 28px;
+    font-family: "Bliss Heavy", sans-serif;
+    font-size: clamp(1.5rem, 0.1383rem + 6.8085vw, 3.5rem);
     text-transform: uppercase;
     text-align: center;
     padding-bottom: 64px;
@@ -527,15 +587,20 @@
     padding: 0;
     line-height: inherit;
     color: #001883;
-    font-family: "Gilroy SemiBold";
-    font-weight: 600;
-    font-size: 32px;
+    font-family: "Bliss Heavy", sans-serif;
+    font-size: clamp(1.5rem, 0.1383rem + 6.8085vw, 3.5rem);
     text-transform: uppercase;
     text-align: center;
     padding-bottom: 32px;
     padding-top: 32px;
 }
-
+#es-magne-b6.es-magne-b6 .es-dose__title--span {
+  display: block;
+  font-size: clamp(1.25rem, 0.3989rem + 4.2553vw, 2.5rem);
+}
+#es-magne-b6.es-magne-b6 .es-dose__title--span2 {
+  text-transform: lowercase;
+}
 #es-magne-b6.es-magne-b6 .es-dose__subtitle {
     margin: 0;
     padding: 0;
@@ -547,21 +612,29 @@
     text-align: center;
     padding-bottom: 64px;
 }
-
+#es-magne-b6.es-magne-b6 .dose__wrapper {
+  flex-basis: 42%;
+  display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-inline: 1rem;
+}
+@media (min-width: 768px) {
+  #es-magne-b6.es-magne-b6 .dose__wrapper {
+    padding-inline: unset;
+  }
+}
 #es-magne-b6.es-magne-b6 .es-dose__single {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 24px;
     background-color: #fff;
     border: 2px solid #001883;
     border-radius: 50px;
-    width: 270px;
+    width: 300px;
 }
 
 #es-magne-b6.es-magne-b6 .es-dose__circle {
-    margin-top: 24px;
     border: 2px solid #001883;
     border-radius: 222px;
     background-color: #fff;
@@ -570,6 +643,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: -2px;
 }
 
 #es-magne-b6.es-magne-b6 .es-dose__icon {
@@ -586,8 +660,19 @@
     font-weight: 600;
     font-size: inherit;
     text-align: center;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 16px;
 }
-
+#es-magne-b6.es-magne-b6 .es-dose__text--under {
+    padding: 0;
+    line-height: inherit;
+    color: #001883;
+    font-family: inherit;
+    font-weight: 600;
+    text-align: center;
+}
 #es-magne-b6.es-magne-b6 .es-dose__span {
     font-size: 32px;
 }
@@ -596,9 +681,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     gap: 32px;
-    padding-bottom: 32px;
 }
 
 #es-magne-b6.es-magne-b6 .es-dose__btn {
@@ -633,6 +716,7 @@
     line-height: inherit;
     color: #962d38;
     font-family: inherit;
+    text-transform: uppercase;
     font-weight: 600;
     font-size: 20px;
     text-align: center;
@@ -683,9 +767,8 @@
     padding: 0;
     line-height: inherit;
     color: inherit;
-    font-family: "Gilroy SemiBold";
-    font-weight: 600;
-    font-size: 28px;
+    font-family: "Bliss Heavy", sans-serif;
+    font-size: clamp(1.5rem, 0.1383rem + 6.8085vw, 3.5rem);
     text-transform: uppercase;
     text-align: center;
     padding-top: 128px;
@@ -735,9 +818,8 @@
     padding: 0;
     line-height: inherit;
     color: #001883;
-    font-family: "Gilroy SemiBold";
-    font-weight: 600;
-    font-size: 32px;
+    font-family: "Bliss Heavy", sans-serif;
+    font-size: clamp(1.5rem, 0.1383rem + 6.8085vw, 3.5rem);
     text-transform: uppercase;
     text-align: center;
     padding-top: 32px;
@@ -884,9 +966,8 @@
     padding: 0;
     line-height: inherit;
     color: inherit;
-    font-family: "Gilroy SemiBold";
-    font-weight: inherit;
-    font-size: 36px;
+    font-family: "Bliss Heavy", sans-serif;
+    font-size: clamp(1.5rem, 0.1383rem + 6.8085vw, 3.5rem);
     text-transform: uppercase;
     text-align: center;
     padding-top: 96px;
@@ -940,14 +1021,26 @@
     padding: 0;
     line-height: inherit;
     color: #001883;
-    font-family: "Gilroy SemiBold";
-    font-weight: 600;
-    font-size: 32px;
+    font-family: "Bliss Heavy", sans-serif;
+    font-size: clamp(1.5rem, 0.1383rem + 6.8085vw, 3.5rem);
     text-align: center;
     padding-top: 200px;
-    padding-bottom: 32px;
 }
-
+#es-magne-b6.es-magne-b6 .es-cross__label {
+  font-family: "Bliss Heavy", sans-serif;
+  text-transform: uppercase;
+  font-size: clamp(0.75rem, 0.4947rem + 1.2766vw, 1.125rem);
+  color: #001883;
+  background-color: #FFF;
+  padding: 0.1rem 0.75rem;
+  max-width: fit-content;
+  margin: 6px auto;
+  text-align: center;
+  -webkit-box-shadow: 0px 0px 50px 35px rgba(107, 139, 199, 0.3);
+  -moz-box-shadow: 0px 0px 50px 35px rgba(107, 139, 199, 0.3);
+  box-shadow: 0px 0px 50px 35px rgba(107, 139, 199, 0.3);
+  animation: es-pulse4 2s infinite;
+}
 #es-magne-b6.es-magne-b6 .es-cross__subtitle {
     margin: 0;
     padding: 0;
@@ -1057,9 +1150,8 @@
     padding: 0;
     line-height: inherit;
     color: #001883;
-    font-family: "Gilroy SemiBold";
-    font-weight: 600;
-    font-size: 32px;
+    font-family: "Bliss Heavy", sans-serif;
+    font-size: clamp(1.5rem, 0.1383rem + 6.8085vw, 3.5rem);
     text-align: center;
     margin-bottom: 32px;
 }
@@ -1160,9 +1252,6 @@
 
 
  @media screen and (min-width: 375px){
-    #es-magne-b6.es-magne-b6 .es-kv__img--packshot {
-        max-width: 90%;
-    }
     #es-magne-b6.es-magne-b6 .es-kv__background {
         /* display: block; */
         position: static;
@@ -1185,12 +1274,12 @@
     #es-magne-b6.es-magne-b6 .es-benefits__title {
         padding-top: 96px;
     }
-    #es-magne-b6.es-magne-b6 .es-benefits__single {
+    /* #es-magne-b6.es-magne-b6 .es-benefits__single {
         flex-direction: row;
         border-radius: 222px;
         width: 275px;
         justify-content: flex-start;
-    }
+    } */
     #es-magne-b6.es-magne-b6 .es-benefits__circle {
         margin-top: 0px;
         margin-left: -4px;
@@ -1423,7 +1512,6 @@
     }
     #es-magne-b6.es-magne-b6 .es-benefits__title {
         padding-top: 175px;
-        font-size: 40px;
         padding-bottom: 75px;
     }
     #es-magne-b6.es-magne-b6 .es-benefits__desc {
@@ -1437,6 +1525,7 @@
     }
     #es-magne-b6.es-magne-b6 .es-benefits__icon {
         width: 60px;
+        height: 60px;
     }
     #es-magne-b6.es-magne-b6 .es-benefits__circle {
         width: 96px;
@@ -1453,7 +1542,6 @@
         margin-inline: unset;
     }
     #es-magne-b6.es-magne-b6 .es-symptoms__title {
-        font-size: 40px;
         padding-bottom: 48px;
         padding-top: 48px;
     }
@@ -1486,7 +1574,6 @@
     }
     #es-magne-b6.es-magne-b6 .es-dose__title {
         padding-top: 128px;
-        font-size: 40px;
     }
     #es-magne-b6.es-magne-b6 .es-dose__subtitle {
         font-size: 24px;
@@ -1501,9 +1588,7 @@
     #es-magne-b6.es-magne-b6 .es-dose__text {
         font-size: 24px;
     }
-    #es-magne-b6.es-magne-b6 .es-dose__single {
-        width: 310px;
-    }
+    
     #es-magne-b6.es-magne-b6 .es-choose {
         min-height: 1041px;
         margin-top: -200px;
@@ -1512,7 +1597,6 @@
         padding-bottom: 24px;
     }
     #es-magne-b6.es-magne-b6 .es-choose__title {
-        font-size: 40px;
         margin-bottom: 96px;
         padding-top: 222px;
     }
@@ -1527,9 +1611,7 @@
         background-position: top left;
         background-repeat: no-repeat;
     }
-    #es-magne-b6.es-magne-b6 .es-ingredients__title {
-        font-size: 40px;
-    }
+
     #es-magne-b6.es-magne-b6 .es-ingredients__text {
         font-size: 24px;
     }
@@ -1575,15 +1657,11 @@
         height: auto;
         opacity: 1;
     }
-    #es-magne-b6.es-magne-b6 .es-cross__title {
-        font-size: 40px;
-    }
+    
     #es-magne-b6.es-magne-b6 #es-cross-packshot {
         display: none;
     }
-    #es-magne-b6.es-magne-b6 .es-deal__title {
-        font-size: 40px;
-    }
+   
     #es-magne-b6.es-magne-b6 .es-deal__subtitle {
         font-size: 28px;
     }
@@ -1761,6 +1839,17 @@
       box-shadow: 0 0 0 rgb(150, 45, 56, 0);
     }
   }
+  @keyframes es-pulse4 {
+  0% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
     </style>
   </head>
   <body>
@@ -1773,8 +1862,9 @@
           </div>
           <p class="es-kv__title">W Tobie <br> jest siła!</p>
           <p class="es-kv__subtitle">Wzmacniaj ją podwójną <br> dawką magnezu<sup class="es-index">6</sup></p>
+          <p class="es-kv__label">Teraz w nowym opakowaniu</p>
           <div class="es-kv__packshot">
-            <img src="./images/kv-packshot.webp" alt="Magnez lek Magne B6 Forte, opakowanie zawiera 60 tabletek powlekanych, na skurcze mięśni, zmęczenie i stres. " class="es-kv__img es-kv__img--packshot" />
+            <img src="./images/kv-packshot-60-NEW.webp" alt="Magnez lek Magne B6 Forte, opakowanie zawiera 60 tabletek powlekanych, na skurcze mięśni, zmęczenie i stres. " class="es-kv__img es-kv__img--packshot" />
             <!-- <img src="./images/kv-badge.webp" alt="" class="es-kv__img es-kv__badge" /> -->
           </div>
         </div>
@@ -1792,7 +1882,7 @@
       <section class="es-features">
         <div class="es-features__content">
           <div class="es-features__single">
-              <img src="./images/feature-1.webp" alt="Na jak długo wystarczy jedno opakowanie leku Magne B6 Forte 60 tabletek powlekanych?" class="es-features__img">
+              <img src="./images/feature-1NEW.webp" alt="Na jak długo wystarczy jedno opakowanie leku Magne B6 Forte 60 tabletek powlekanych?" class="es-features__img">
               <p class="es-features__text">Magne B<sub class="es-index">6</sub> Forte 60 tabletek zawiera wysoce przyswajalny magnez<sup>5</sup> (cytrynian magnezu).</p>
           </div>
           <div class="es-features__single">
@@ -1918,7 +2008,7 @@
       </section>
 
       <section class="es-dose">
-        <p class="es-dose__title">dawkowanie</p>
+        <p class="es-dose__title">dawkowanie, <span class="es-dose__title--span">to proste jak 2<span class="es-dose__title--span2">x</span>2!</span></p>
         <input type="checkbox" id="es-dose-expand-toggle" />
         <label for="es-dose-expand-toggle" id="es-dose-expand-btn">
           <div class="es-dose__btn">
@@ -1934,8 +2024,9 @@
                   <div class="es-dose__circle">
                     <img src="./images/icon-7.webp" alt="Magnez B6 Forte 60 tabletek powlekanych. Jaka jest dzienna dawka magnezu dla dorosłych?" class="es-dose__img es-dose__icon">
                   </div>
-                  <p class="es-dose__text"><span class="es-dose__span">3-4 </span>tabletki</p>
+                  <p class="es-dose__text"><span class="es-dose__span">2x2 </span>tabl. na dobę</p>
               </div>
+              <p class="es-dose__text--under">3-4 tabletek w 2 lub 3 dawkach podzielonych podczas posiłków. 2x2 na dobę jest przykładowym dawkowaniem.<sup>4</sup></p>
             </div>
             <div class="dose__wrapper">
               <p class="es-dose__desc">Dzieci i&nbsp;młodzież</p>
@@ -1943,11 +2034,12 @@
                 <div class="es-dose__circle">
                   <img src="./images/icon-7.webp" alt="Jaka jest dzienna dawka magnezu dla dzieci i młodzieży? Jaki magnez najlepiej przyswajalny?" class="es-dose__img es-dose__icon">
                 </div>
-                <p class="es-dose__text"><span class="es-dose__span">2-4 </span>tabletki</p>
+                <p class="es-dose__text"><span class="es-dose__span">2-4 </span>tabl.</p>
               </div>
+              <p class="es-dose__text--under">Dawkowanie na dobę, w 2-3 dawkach podzielonych, podczas posiłku.<sup>4</sup></p>
             </div>
           </div>
-          <p class="es-dose__subtitle">Dawkowanie na dobę, w&nbsp;2-3 dawkach podzielonych, podczas posiłku<sup class="es-index">4</sup></p>
+          
           <img src="./images/picture-2.webp" alt="Magnez lek bez recepty w tabletkach zawiera wysoce przyswajalny magnez w postaci cytrynianu magnezu." class="es-dose__img">
           <div class="es-choose">
             <p class="es-choose__title">Jak wybrać <br> i&nbsp;prawidłowo <br> przyjmować magnez?</p>
@@ -2003,7 +2095,7 @@
                 <p class="es-info__title">Czy wiesz, że?</p>
                 <p class="es-info__text">Rodzaj soli wpływa na przyswajalność jonów magnezu? Cytrynian magnezu to organiczna sól magnezu, lepiej przyswajalna niż nieorganiczne sole (np. tlenki czy chlorki).<sup class="es-index">5,7</sup></p>
               </div>
-                <p class="es-info__desc"><b>Substancje czynne:</b> <br>100 mg jonów magnezu (w postaci magnezu cytrynianu), 10 mg pirydoksyny chlorowodorku (witamina B<sub class="es-index">6</sub>)</p>
+                
             </div>
           </div>
           <label for="es-ingredients-expand-toggle" id="es-ingredients-expand-btn-2">
@@ -2032,15 +2124,16 @@
           allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" 
           allowfullscreen>
         </iframe> -->
-        <video class="es-video__iframe" width="100%" height="auto" poster="./images/poster.webp" controls>
-          <source src="./images/Magne-Forte-reklama.mp4" type="video/mp4">
+        <video class="es-video__iframe" width="100%" height="auto" poster="./images/posterNEW.webp" controls>
+          <source src="./images/Magne-Forte-reklamaNEW.mp4" type="video/mp4">
         </video>
       </section>
 
       <section class="es-cross">
         <p class="es-cross__title">RODZINA MAGNE B<sub class="es-index">6</sub><sup class="es-index">®</sup></p>
+        <p class="es-cross__label">Teraz w nowych opakowaniach</p>
         <input type="checkbox" id="es-cross-expand-toggle" />
-        <img src="./images/cross-1.webp" alt="" class="es-cross__img" id="es-cross-packshot">
+        <img src="./images/cross-1NEW.webp" alt="" class="es-cross__img" id="es-cross-packshot">
         <label for="es-cross-expand-toggle" id="es-cross-expand-btn">
           <div class="es-cross__btn es-cross__btn--mobile">
             Poznaj wszystkie produkty
@@ -2050,17 +2143,17 @@
           <p class="es-cross__subtitle">Sprawdź leki bez recepty</p>
           <div class="es-cross__content">
             <div class="es-cross__single">
-              <img src="./images/cross-1.webp" alt="Jakie są sposoby radzenia sobie ze stresem? Kup lek z magnezem bez recepty Magne B6 Forte w aptece internetowej Melissa." class="es-cross__img">
+              <img src="./images/cross-1NEW.webp" alt="Jakie są sposoby radzenia sobie ze stresem? Kup lek z magnezem bez recepty Magne B6 Forte w aptece internetowej Melissa." class="es-cross__img">
               <p class="es-cross__name">Magne B<sub class="es-index">6</sub> FORTE <br> 100 tabl.</p>
               <a href="https://www.apteka-melissa.pl/produkt/magne-b6-forte-100-tabl,71382.html" target="_blank" class="es-cross__btn">Sprawdź</a>
             </div>
             <div class="es-cross__single">
-              <img src="./images/cross-2.webp" alt="Magnez B6 - lek Magne B6 Forte 60 tabletek powlekanych na objawy niedoboru magnezu: kołatanie serca, skurcze mięśni." class="es-cross__img">
+              <img src="./images/cross-2NEW.webp" alt="Magnez B6 - lek Magne B6 Forte 60 tabletek powlekanych na objawy niedoboru magnezu: kołatanie serca, skurcze mięśni." class="es-cross__img">
               <p class="es-cross__name">Magne B<sub class="es-index">6</sub> FORTE <br> 60 tabl.</p>
               <a href="https://www.apteka-melissa.pl/produkt/magne-b6-forte-60-tabl,26882.html" target="_blank" class="es-cross__btn">Sprawdź</a>
             </div>
             <div class="es-cross__single">
-              <img src="./images/cross-3.webp" alt="Leki z magnezem na objawy braku magnezu, takie jak: ciągłe zmęczenie, wahania nastroju, drganie powiek, zaburzenia lękowe." class="es-cross__img">
+              <img src="./images/cross-3NEW.webp" alt="Leki z magnezem na objawy braku magnezu, takie jak: ciągłe zmęczenie, wahania nastroju, drganie powiek, zaburzenia lękowe." class="es-cross__img">
               <p class="es-cross__name">Magne B<sub class="es-index">6</sub> <br> 100 tabl.</p>
               <a href="https://www.apteka-melissa.pl/produkt/magne-b6-60-tabl,67420.html" target="_blank" class="es-cross__btn">Sprawdź</a>
             </div>
@@ -2068,7 +2161,7 @@
           <p class="es-cross__subtitle">Sprawdź suplement diety</p>
           <div class="es-cross__content">
             <div class="es-cross__single">
-              <img src="./images/cross-4.webp" alt="Suplement diety Magne B6 Zmęczenie i Stres zawiera adaptogen, wyciąg z korzenia ashwagandhy - na problemy z koncentracją." class="es-cross__img">
+              <img src="./images/cross-4NEW.webp" alt="Suplement diety Magne B6 Zmęczenie i Stres zawiera adaptogen, wyciąg z korzenia ashwagandhy - na problemy z koncentracją." class="es-cross__img">
               <p class="es-cross__name">Magne-B<sub class="es-index">6</sub> ZMĘCZENIE I&nbsp;STRES <br> 30 tabl.</p>
               <a href="https://www.apteka-melissa.pl/produkt/magne-b6-zmeczenie-i-stres-30-tabl-1-szt,58888.html" target="_blank" class="es-cross__btn" href >Sprawdź</a> 
             </div>
@@ -2140,7 +2233,7 @@
           <sup class="es-index">10.</sup> Anna Jabłecka, Katarzyna Korzeniowska, Anna Skołuda, Artur Cieślewicz, Preparaty magnezu. Farmacja Współczesna 2011, https://www.akademiamedycyny.pl/wp-content/uploads/2016/05/201101_Farmacja_004.pdf, data dostępu 15.03.2023.<br>
         </div>
         <div class="es-footer__content">
-            <p class="es-footer__version">MAT-PL-2201603-2.0-04.2023</p>
+            <p class="es-footer__version">MAT-PL-2201603-3.0-10.2023</p>
             <img src="./images/logo.webp" alt="sanofi" class="footer__img">
         </div>
         <div class="es-footer__text">
